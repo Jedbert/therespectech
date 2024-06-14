@@ -32,18 +32,41 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding-top: 4px;
-    margin-right: -190px;
-    margin-left: 158px;
+    width: 100%;
+    right: 0;
 }
 
 nav ul {
     display: flex;
     list-style: none;
-    float: right;
+    margin: 0;
+    padding: 0;
+    position: relative;
 }
 
 nav ul li {
     margin: 0 10px;
+}
+
+nav ul li:first-child {
+    display: flex;
+    margin-left: 1179px;
+}
+
+.welcome {
+    color: var(--dark-color);
+    font-family: "Oleo Script Swash Caps", sans-serif;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 36px;
+    text-transform: capitalize;
+    display: flex;
+    position: fixed;
+    float: left;
+    justify-content: flex-start;
+    margin-left: 146px;
+    margin-right: 796px;
 }
 
 nav ul li a {
@@ -115,21 +138,6 @@ a.btn.light:hover {
     margin-left: 19px;
 }
 
-.welcome {
-    color: var(--dark-color);
-    font-family: "Oleo Script Swash Caps", sans-serif;
-    font-size: 28px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 36px;
-    text-transform: capitalize;
-    display: flex;
-    position: relative;
-    float: left;
-    justify-content: flex-start;
-    /* margin-right: 556px; */
-}
-
 /* side nav */
 
 .sidenav {
@@ -175,22 +183,6 @@ a.btn.light:hover {
 
 .sidenav a:nth-child(4) {
     margin-bottom: 35vh;
-}
-
-.side-bottom {
-    display: flex;
-    justify-content: flex-end;
-    flex-direction: column;
-    z-index: 1;
-    overflow-y: hidden;
-    position: fixed;
-    bottom: 0;
-    padding: 10px;
-    padding-top: 10px;
-}
-
-.side-bottom a img {
-    display: block;
 }
 
 @media screen and (max-height: 450px) {
@@ -254,4 +246,103 @@ img {
 
 .schedule img {
     margin-left: 145px
+}
+
+/* Responsive Designs */
+@media screen and (max-width: 360px) {
+    .wrapper {
+        width: 100%;
+        padding: 0 16px;
+    }
+
+    .welcome {
+        margin-left: 16px;
+        margin-right: 0;
+        font-size: 20px;
+    }
+
+    nav {
+        padding-top: 16px;
+        padding-bottom: 16px;
+        position: relative;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul li {
+        margin: 16px 0;
+    }
+
+    nav ul li:first-child {
+        margin-left: 0;
+    }
+
+    .main-schedule {
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .schedule {
+        width: 100%;
+        margin-bottom: 16px;
+    }
+
+    .schedule h4 {
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+    .schedule p,
+    img {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .schedule img {
+        margin-left: 0;
+    }
+
+    .sidenav {
+        display: none;
+    }
+
+    .toggle-button {
+        display: block;
+        position: fixed;
+        top: 16px;
+        left: 16px;
+        z-index: 100;
+        background-color: var(--dark-color);
+        color: var(--light-color);
+        padding: 8px 16px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+    .toggle-button:hover {
+        background-color: var(--red-color);
+    }
+
+    .sidenav.open {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: var(--dark-color);
+        padding-top: 16px;
+        overflow-y: auto;
+    }
+
+    .sidenav.open a {
+        padding: 16px;
+        font-size: 18px;
+    }
 }
