@@ -136,6 +136,8 @@ a.btn.light:hover {
     margin-top: 3px;
     left: 0;
     margin-left: 19px;
+    z-index: 9999;
+    position: relative;
 }
 
 /* side nav */
