@@ -115,9 +115,52 @@
                     <h4>From One Week Statistics</h4>
                 </div>
             </div>
+
+            <div class="side_menu">
+                <div class="top-post">
+                    <h4>Recent post</h4>
+                    <h5 class="top-more">See More</h5>
+                </div>
+                <div class="post">
+                    <div class="text">
+                        <p>UI/UX Designer</p>
+                        <a href="#" class="btn dark">Edit</a>
+                    </div>
+                    <div class="date-container">
+                        <p id="date-posted">Date Posted: <span id="current-date"></span></p>
+                    </div>
+                    <div class="text">
+                        <p>Remote</p>
+                        <p>Full Time</p>
+                    </div>
+                </div>
+
+            </div>
         </main>
     </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            function updateDate() {
+                const dateElement = document.getElementById('current-date');
+                const currentDate = new Date();
+                const options = { year: 'numeric', month: 'long', day: 'numeric' };
+                const formattedDate = currentDate.toLocaleDateString(undefined, options);
+                dateElement.textContent = formattedDate;
+            }
 
+            // Update the date initially
+            updateDate();
+
+            // Check every hour if the date needs to be updated
+            setInterval(function () {
+                const currentTime = new Date();
+                if (currentTime.getHours() === 0 && currentTime.getMinutes() === 0) {
+                    updateDate();
+                }
+            }, 60 * 1000); // Check every minute
+        });
+
+    </script>
 
 </body>
 

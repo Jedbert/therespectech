@@ -18,6 +18,7 @@
 body {
     font-family: "Open Sans", sans-serif;
     background-color: var(--background-color);
+    /* overflow-x: hidden; */
 }
 
 
@@ -50,7 +51,7 @@ nav ul li {
 
 nav ul li:first-child {
     display: flex;
-    margin-left: 1179px;
+    margin-left: 979px;
 }
 
 .welcome {
@@ -67,6 +68,7 @@ nav ul li:first-child {
     justify-content: flex-start;
     margin-left: 146px;
     margin-right: 796px;
+    text-wrap: nowrap;
 }
 
 nav ul li a {
@@ -84,7 +86,7 @@ nav ul li a.active {
     color: var(--pink-color);
 }
 
-a.btn {
+a.btn.light {
     display: inline-flex;
     width: 200px;
     height: 44px;
@@ -347,4 +349,87 @@ img {
         padding: 16px;
         font-size: 18px;
     }
+}
+
+.side_menu {
+    position: absolute;
+    /* Add this */
+    top: 0;
+    margin-top: 112px;
+    right: 0;
+    margin-right: -190px;
+    display: inline-flex;
+    width: 350px;
+    padding-left: 12px;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: right;
+    gap: 12px;
+    border-radius: 10px;
+    background: #FFF;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.10);
+    z-index: 1;
+    /* Add this to ensure it's on top of other elements */
+}
+
+.top-post {
+    display: flex;
+    position: relative;
+    height: 44px;
+    padding: 10px 9px;
+    justify-content: space-between;
+    align-items: center;
+    gap: 164px;
+    background: #FFF;
+    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.05);
+    text-wrap: nowrap;
+}
+
+.post {
+    border-radius: 10px;
+    border: 1px solid var(--faded-gray, #D9D9D9);
+    background: #FFF;
+    height: 100px;
+    padding-right: 10px;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+}
+
+.text {
+    display: flex;
+    position: relative;
+    justify-content: flex-start;
+    align-items: flex-start;
+    left: 0;
+    gap: 50px;
+    padding-right: 50px;
+}
+
+.post .text p {
+    color: #333;
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    /* 150% */
+    text-transform: capitalize;
+}
+
+a.btn.dark {
+    display: flex;
+    padding: 4px 26px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    right: 0px;
+    top: 17px;
+    transition: all 400ms;
+    border-radius: 5px;
+    background-color: var(--dark-color);
+    text-decoration: none;
+    color: var(--light-color);
+    font-weight: bold;
 }
