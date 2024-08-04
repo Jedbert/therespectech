@@ -21,6 +21,13 @@ body {
     /* overflow-x: hidden; */
 }
 
+@media (max-width: 360px) {
+    body {
+        margin: 0;
+        padding: 0;
+    }
+}
+
 
 .wrapper {
     width: 1152px;
@@ -51,7 +58,7 @@ nav ul li {
 
 nav ul li:first-child {
     display: flex;
-    margin-left: 979px;
+    margin-left: 1043px;
 }
 
 .welcome {
@@ -353,13 +360,11 @@ img {
 
 .side_menu {
     position: absolute;
-    /* Add this */
-    top: 0;
-    margin-top: 112px;
-    right: 0;
-    margin-right: -190px;
-    display: inline-flex;
-    width: 350px;
+    top: 114px;
+    left: 0;
+    margin-left: 1043px;
+    display: flex;
+    width: 440px;
     padding-left: 12px;
     flex-direction: column;
     justify-content: flex-end;
@@ -369,7 +374,7 @@ img {
     background: #FFF;
     box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.10);
     z-index: 1;
-    /* Add this to ensure it's on top of other elements */
+
 }
 
 .top-post {
@@ -385,37 +390,37 @@ img {
     text-wrap: nowrap;
 }
 
-.post {
-    border-radius: 10px;
-    border: 1px solid var(--faded-gray, #D9D9D9);
-    background: #FFF;
-    height: 100px;
-    padding-right: 10px;
-    align-items: center;
-    gap: 10px;
-    align-self: stretch;
-}
-
-.text {
-    display: flex;
-    position: relative;
-    justify-content: flex-start;
-    align-items: flex-start;
-    left: 0;
-    gap: 50px;
-    padding-right: 50px;
-}
-
-.post .text p {
-    color: #333;
+.dark-text p {
+    color: var(--dark-color);
     font-family: Roboto;
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
     line-height: 24px;
-    /* 150% */
+    height: 64px;
+    text-transform: capitalize;
+    margin-left: 156px;
+    margin-top: -90px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.both-div {
+    color: var(--dark-color);
+    font-family: Poppins;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    margin-left: 156px;
     text-transform: capitalize;
 }
+
+.text-bottom {
+    display: flex;
+    gap: 25px;
+}
+
 
 a.btn.dark {
     display: flex;
@@ -424,8 +429,8 @@ a.btn.dark {
     align-items: center;
     gap: 10px;
     position: absolute;
-    right: 0px;
-    top: 17px;
+    right: 39px;
+    top: 95px;
     transition: all 400ms;
     border-radius: 5px;
     background-color: var(--dark-color);

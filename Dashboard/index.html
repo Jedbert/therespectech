@@ -123,17 +123,38 @@
                 </div>
                 <div class="post">
                     <div class="text">
+                        <img class="img-dark" src="images/ui_ux.svg" alt="">
+                        <div class="dark-text">
+                            <p>UI/UX Designer</p>
+                            <a href="#" class="btn dark">Edit</a>
+                        </div>
+                        <div class="both-div">
+                            <div class="date-container">
+                                <p id="date-posted"> <span id="current-date"></span></p>
+                            </div>
+                            <div class="text-bottom">
+                                <p>Remote</p>
+                                <p>Full Time</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <!-- <div style="display: flex; justify-content:space-between; padding: 15px;">
+                    <div><img class="img-dark" src="images/ui_ux.svg" alt=""></div>
+                    <div>
                         <p>UI/UX Designer</p>
-                        <a href="#" class="btn dark">Edit</a>
+                        <a href="#" class="">Edit</a>
+                        <div class="date-container">
+                            <p id="date-posted"> <span id="current-date"></span></p>
+                        </div>
                     </div>
-                    <div class="date-container">
-                        <p id="date-posted">Date Posted: <span id="current-date"></span></p>
-                    </div>
-                    <div class="text">
+                    <div>
                         <p>Remote</p>
                         <p>Full Time</p>
                     </div>
-                </div>
+                </div> -->
 
             </div>
         </main>
@@ -148,10 +169,8 @@
                 dateElement.textContent = formattedDate;
             }
 
-            // Update the date initially
             updateDate();
 
-            // Check every hour if the date needs to be updated
             setInterval(function () {
                 const currentTime = new Date();
                 if (currentTime.getHours() === 0 && currentTime.getMinutes() === 0) {
